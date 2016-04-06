@@ -1,0 +1,10 @@
+<template name="cleanLayout">
+  {{> header}}
+  
+  <div class="container content">
+    <div class="row">
+      {{> status}}
+      {{> Template.dynamic template=yield}}
+    </div>
+  </div>
+</template>

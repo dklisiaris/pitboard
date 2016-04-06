@@ -1,0 +1,26 @@
+{
+  "name": "pitboard",
+  "version": "0.0.1",
+  "description": "Real-time intercomm app for Racing Enthusiasts",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "racing",
+    "board",
+    "real-time",
+    "pits"
+  ],
+  "author": "Dimitris Klisiaris",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "bigtext": "^0.1.8",
+    "css-element-queries": "^0.3.2",
+    "meteor-node-stubs": "^0.2.1"
+  }
+}

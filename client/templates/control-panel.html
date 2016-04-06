@@ -1,0 +1,23 @@
+<template name="controlPanel">
+  {{#if Template.subscriptionsReady}}
+  {{> raceActions}}
+  <hr class="line-no-margin-top">
+  <form class="save-race-data">
+    {{#each lineText in board}}
+      {{> inputLine line=lineText}}
+    {{/each}}
+    <div class="form-group">
+      <button class="btn btn-primary btn-lg" type="submit">Save</button>
+    </div>
+  </form>
+  {{else}}
+    {{> loader}}
+  {{/if}}
+</template>
+
+<template name="inputLine">
+  <div class="form-group">
+    <input class="form-control input-line" type="text" name="line[]" value="{{line}}" placeholder="{{line}}">
+  </div>
+</template>
+

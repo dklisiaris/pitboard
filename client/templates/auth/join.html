@@ -1,0 +1,23 @@
+<template name="join">
+    
+      <div class="login-container">
+        <h1>Join race</h1><br>
+        {{#if errorMessages}}
+          <div class="list-errors">
+            {{#each errorMessages}}
+              <div class="list-error-item">{{this}}</div>
+            {{/each}}
+          </div>
+        {{/if}}
+        <form class="join-form">
+        <input type="number" name="race-id" placeholder="Race ID">
+        <input type="number" name="code" placeholder="Code">
+        <input type="submit" name="login" class="login login-submit" value="Join">
+        </form>
+        
+        <div class="login-help">
+        <a href="{{pathFor 'signup'}}">Sign Up</a> - <a href="{{pathFor 'login'}}">Login</a>
+        </div>
+      </div>
+    
+</template>

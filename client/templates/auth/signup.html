@@ -1,0 +1,24 @@
+<template name="signup">
+      <div class="login-container">
+        <h1>Sign Up for a new Account</h1><br>
+        {{#if errorMessages}}
+          <div class="list-errors">
+            {{#each errorMessages}}
+              <div class="list-error-item">{{this}}</div>
+            {{/each}}
+          </div>
+        {{/if}}
+        <form class="signup-form">
+          <input type="text" name="username" placeholder="Username" class="no-margin-bottom">
+          <div class="login-help">-OR-</div>
+          <input type="email" name="email" placeholder="Email">
+          <input type="password" name="password" placeholder="Password">
+          <input type="password" name="password-again" placeholder="Password Confirm">
+          <input type="submit" name="login" class="login login-submit" value="Sign Up">
+        </form>
+        
+        <div class="login-help">
+        Have account? <a href="{{pathFor 'login'}}">Login</a><!--  - <a href="#">Forgot Password</a> -->
+        </div>
+      </div>
+</template>

@@ -1,0 +1,8 @@
+<template name="default">
+  {{> header}}
+  
+  <div class="container content">
+    {{> status}}
+    {{> Template.dynamic template=yield}}
+  </div>
+</template>

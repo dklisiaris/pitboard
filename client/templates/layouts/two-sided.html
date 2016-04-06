@@ -1,0 +1,15 @@
+<template name="twoSided">
+  {{> header}}
+  <div class="container content">
+    <div class="row">
+      {{> status}}
+      <div class="col-md-6">
+        {{> Template.dynamic template=left}}
+      </div>
+      <div class="col-md-6">
+        {{> Template.dynamic template=right}}
+      </div>
+    </div>
+  </div>
+
+</template>

@@ -1,0 +1,33 @@
+<template name="raceActions">
+  <div class="row">
+    {{#if showIdentity}}
+    <div class="col-xs-6 col-md-4">
+      <div class="race-info-container">
+        <h3 class="race-header green">{{commafy race.raceId}}</h3>
+        <span class="race-description">Id</span>
+      </div>
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <div class="race-info-container">
+        <h3 class="race-header green">{{race.code}}</h3>
+        <span class="race-description">Code</span>
+      </div>
+    </div>
+    {{/if}}
+    {{#if isOwner}}
+      <div class="col-xs-6 col-md-3 col-md-offset-6">
+        <div class="race-info-container">
+          <span class="race-description">Mobile</span><br>
+          <label class="label-switch switch-success">
+          <input type="checkbox" class="switch switch-bootstrap run-on-mobile-swtc" 
+          value="{{race.runOnMobile}}" {{isChecked race.runOnMobile}}>
+          <span class="lable"></span></label>
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-3 race-info-container">
+        <button class="btn btn-danger btn-lg reset-race-btn" type="button">Reset Race</button>
+      </div>
+    {{/if}}
+  </div>
+
+</template>

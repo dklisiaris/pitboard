@@ -1,0 +1,23 @@
+<template name="board">
+  <div class="board-container">
+    {{#if Template.subscriptionsReady}}
+      {{#if shouldSplit}}
+      <div class="row">
+        {{#each half in halfBoards}}
+          <div class="col-md-6">
+            {{#each lineText in half}}
+              {{> boardLine line=lineText fontSize=(calcFontSize half.length)}}
+            {{/each}}
+          </div>
+        {{/each}}
+      </div>
+      {{else}}
+        {{#each lineText in board}}
+          {{> boardLine line=lineText fontSize=(calcFontSize board.length)}}
+        {{/each}}
+      {{/if}}
+    {{else}}
+      {{> loader}}
+    {{/if}}
+  </div>
+</template>
