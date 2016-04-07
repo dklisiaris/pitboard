@@ -4,7 +4,9 @@ App.info({
   description: 'Real-time comm app for Racing Enthusiasts',
   author: 'Dimitris klisiaris',
   email: 'dklisiaris@gmail.com',
-  website: 'pitboard.klisiaris.org'
+  website: 'pitboard.klisiaris.org',
+  version: '0.0.1',
+  buildNumber: '100'
 });
 
 App.icons({
