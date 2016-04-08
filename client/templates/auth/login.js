@@ -10,6 +10,9 @@ Template.login.helpers({
   },
   errorClass: function(key) {
     return Session.get(ERRORS_KEY)[key] && 'error';
+  },
+  isCordova: function(){
+    return Meteor.isCordova;
   }
 });
 

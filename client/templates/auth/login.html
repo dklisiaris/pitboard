@@ -18,9 +18,11 @@
         <div class="login-help">
         No account? <a href="{{pathFor 'signup'}}">Sign Up</a><!--  - <a href="#">Forgot Password</a> -->
         </div>
+        {{#unless isCordova}}
         <div class="login-help">
           <a href="https://dl.dropboxusercontent.com/u/4888041/pitboard/pitboard.apk"><img src="/images/android-download.png" height="50"></a>
         </div>
+        {{/unless}}
       </div>
     
 </template>
